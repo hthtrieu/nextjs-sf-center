@@ -1,0 +1,12 @@
+{
+  "common": {
+    "hello": "Xin chào"
+  },
+  "header": {
+    "label": {
+      "home": "Trang chủ",
+      "about_us": "Giới thiệu",
+      "facilities": "Cở sở vật chất"
+    }
+  }
+}

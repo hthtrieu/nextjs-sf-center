@@ -4,8 +4,12 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEventListener } from "@/hooks/user-event-listener";
+import { Constants } from "@/lib/constant";
+import { useTrans } from "@/hooks/useTrans";
 
 export const Header = ({ className }: { className?: string }) => {
+  const { t } = useTrans();
+
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
@@ -49,24 +53,28 @@ export const Header = ({ className }: { className?: string }) => {
 
             <div className="ml-auto hidden h-full items-center lg:flex">
               <div className="flex items-center gap-x-2 md:gap-x-4 lg:gap-x-6 xl:gap-x-8">
-                (
                 <ul className="flex items-center gap-x-2 md:gap-x-4 lg:gap-x-6 xl:gap-x-8">
-                  <li key={"abc"}>
-                    <Link
-                      href={"/"}
-                      className={cn(
-                        "text-[15px] underline-offset-4 hover:underline",
-                        {
-                          "text-dark-1": !isHomePage,
-                          "font-medium text-primary": pathname === "",
-                        }
-                      )}
-                    >
-                      {"label"}
-                    </Link>
-                  </li>
+                  {Constants.HEADER_URLS.map(
+                    (item: { label: string; href: string }, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item?.href}
+                          className={cn(
+                            "text-[15px] underline-offset-4 hover:underline",
+                            {
+                              "text-dark-1": !isHomePage,
+                              "font-medium text-primary":
+                                pathname === item.href,
+                            }
+                          )}
+                        >
+                          {t(item.label)}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </ul>
-                )
+
                 <div className="max-[1441px]:block min-[1441px]:hidden">
                   <div>Lang</div>
                 </div>

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
+import { getServerTranslations } from "@/i18n";
+import { getLocale } from "@/i18n/utils";
+import TranslationsProvider from "@/components/providers/TranslationsProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,18 +21,24 @@ export const metadata: Metadata = {
   description: "Base Dev Nextjs",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const { resources } = await getServerTranslations(locale);
   return (
     <>
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased relative flex min-h-screen flex-col overflow-x-hidden`}
         >
-          <Suspense fallback={<>Loading suspense</>}>{children} </Suspense>
+          {/* <TranslationsProvider locale={locale} resources={resources}> */}
+          <TranslationsProvider locale={locale} resources={resources}>
+            <Suspense fallback={<>Loading suspense</>}>{children} </Suspense>
+          </TranslationsProvider>
+          {/* <TranslationsProvider/> */}
         </body>
       </html>
     </>

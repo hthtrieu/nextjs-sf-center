@@ -1,0 +1,12 @@
+{
+  "common": {
+    "hello": "Hello"
+  },
+  "header": {
+    "label": {
+      "home": "Hone",
+      "about_us": "About us",
+      "facilities": "Facilities"
+    }
+  }
+}
