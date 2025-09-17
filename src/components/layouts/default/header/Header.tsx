@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEventListener } from "@/hooks/user-event-listener";
 import { Constants } from "@/lib/constant";
 import { useTrans } from "@/hooks/useTrans";
+import { RegisterCourseButton } from "./RegisterCourseButton";
 
 export const Header = ({ className }: { className?: string }) => {
   const { t } = useTrans();
@@ -37,7 +38,7 @@ export const Header = ({ className }: { className?: string }) => {
           "bg-transparent": isHomePage && !scrolling,
           "bg-white/80 shadow backdrop-blur supports-[backdrop-filter]:bg-white/75":
             !isHomePage || scrolling,
-          "bg-header-dark  supports-[backdrop-filter]:bg-header-dark":
+          "bg-header-dark bg-white  supports-[backdrop-filter]:bg-header-dark":
             isHomePage && scrolling,
         },
         className
@@ -47,8 +48,18 @@ export const Header = ({ className }: { className?: string }) => {
         <MaxWidthWrapper>
           <div className="flex h-[57px] items-center">
             <div className="flex flex-col justify-between gap-y-1.5">
-              <Link href="/">Logo</Link>
-              <span className="text-xs">{"description"}</span>
+              <Link href="/">
+                <img
+                  src="/assets/icons/logo.jpg"
+                  alt="logo"
+                  // width={100}
+                  // height={100}
+                  className="h-16 w-auto rounded-2xl"
+                />
+              </Link>
+              {/* <span className="text-xs">
+                {"To be Your wings to be the future!"}
+              </span> */}
             </div>
 
             <div className="ml-auto hidden h-full items-center lg:flex">
@@ -60,7 +71,7 @@ export const Header = ({ className }: { className?: string }) => {
                         <Link
                           href={item?.href}
                           className={cn(
-                            "text-[15px] underline-offset-4 hover:underline",
+                            "text-base underline-offset-4 hover:text-sky-800 font-bold",
                             {
                               "text-dark-1": !isHomePage,
                               "font-medium text-primary":
@@ -74,7 +85,9 @@ export const Header = ({ className }: { className?: string }) => {
                     )
                   )}
                 </ul>
-
+                <div>
+                  <RegisterCourseButton />
+                </div>
                 <div className="max-[1441px]:block min-[1441px]:hidden">
                   <div>Lang</div>
                 </div>

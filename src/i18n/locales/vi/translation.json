@@ -6,7 +6,30 @@
     "label": {
       "home": "Trang chủ",
       "about_us": "Giới thiệu",
-      "facilities": "Cở sở vật chất"
+      "facilities": "Cở sở vật chất",
+      "contact": "Liên hệ",
+      "courses": "Khóa học"
+    },
+    "register_button": "Đăng kí ngay"
+  },
+  "courses": {
+    "course_1": {
+      "name": "Khóa học 1",
+      "description": "Mô tả khóa học 1"
+    },
+    "course_2": {
+      "name": "Khóa học 2",
+      "description": "Mô tả khóa học 2"
+    },
+    "course_3": {
+      "name": "Khóa học 3",
+      "description": "Mô tả khóa học 3"
     }
+  },
+  "top_students": {
+    "title": "Học viên tiêu biểu"
+  },
+  "facilities": {
+    "title": "Cơ sở vật chất"
   }
 }

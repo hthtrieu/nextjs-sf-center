@@ -21,6 +21,10 @@ export class Constants {
     },
 
     {
+      label: "header.label.courses",
+      href: "/courses",
+    },
+    {
       label: "header.label.facilities",
       href: "/facilities",
     },
@@ -96,4 +100,38 @@ export class Constants {
       LABEL: "VN",
     },
   };
+
+  static COURSES = [
+    {
+      description: "courses.course_1.description",
+      name: "courses.course_1.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_2.description",
+      name: "courses.course_2.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_3.description",
+      name: "courses.course_3.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+
+    {
+      description: "courses.course_1.description",
+      name: "courses.course_1.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_2.description",
+      name: "courses.course_2.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_3.description",
+      name: "courses.course_3.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+  ];
 }
