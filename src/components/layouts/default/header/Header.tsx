@@ -7,6 +7,7 @@ import { useEventListener } from "@/hooks/user-event-listener";
 import { Constants } from "@/lib/constant";
 import { useTrans } from "@/hooks/useTrans";
 import { RegisterCourseButton } from "./RegisterCourseButton";
+import MobileHeader from "./MobileHeader";
 
 export const Header = ({ className }: { className?: string }) => {
   const { t } = useTrans();
@@ -46,7 +47,7 @@ export const Header = ({ className }: { className?: string }) => {
     >
       <header className="relative flex h-full flex-col justify-end py-2">
         <MaxWidthWrapper>
-          <div className="flex h-[57px] items-center">
+          <div className="flex h-[57px] items-center justify-between">
             <div className="flex flex-col justify-between gap-y-1.5">
               <Link href="/">
                 <img
@@ -62,7 +63,7 @@ export const Header = ({ className }: { className?: string }) => {
               </span> */}
             </div>
 
-            <div className="ml-auto hidden h-full items-center lg:flex">
+            <div className="ml-auto hidden h-full items-center md:flex">
               <div className="flex items-center gap-x-2 md:gap-x-4 lg:gap-x-6 xl:gap-x-8">
                 <ul className="flex items-center gap-x-2 md:gap-x-4 lg:gap-x-6 xl:gap-x-8">
                   {Constants.HEADER_URLS.map(
@@ -88,10 +89,13 @@ export const Header = ({ className }: { className?: string }) => {
                 <div>
                   <RegisterCourseButton />
                 </div>
-                <div className="max-[1441px]:block min-[1441px]:hidden">
+                {/* <div className="max-[1441px]:block min-[1441px]:hidden">
                   <div>Lang</div>
-                </div>
+                </div> */}
               </div>
+            </div>
+            <div className="flex md:hidden items-center">
+              <MobileHeader />
             </div>
           </div>
         </MaxWidthWrapper>

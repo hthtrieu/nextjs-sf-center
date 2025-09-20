@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Wix_Madefor_Text,
+  Wix_Madefor_Display,
+} from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import { getServerTranslations } from "@/i18n";
 import { getLocale } from "@/i18n/utils";
 import TranslationsProvider from "@/components/providers/TranslationsProvider";
+import { SuspenseMotion } from "@/components/common/Suspense";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,9 +22,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const wixMadeforText = Wix_Madefor_Text({
+  variable: "--font-wix-madefor-text",
+  subsets: ["latin"],
+});
+
+const wixMadeforDisplay = Wix_Madefor_Display({
+  variable: "--font-wix-madefor-display",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Base Nextjs",
-  description: "Base Dev Nextjs",
+  title: "Starfish English Center",
+  description: "To be Your wings to be the future",
 };
 
 export default async function RootLayout({
@@ -32,11 +48,19 @@ export default async function RootLayout({
     <>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased relative flex min-h-screen flex-col overflow-x-hidden`}
+          className={`${wixMadeforDisplay.variable} ${wixMadeforText.variable} antialiased relative flex min-h-screen flex-col overflow-x-hidden`}
         >
           {/* <TranslationsProvider locale={locale} resources={resources}> */}
           <TranslationsProvider locale={locale} resources={resources}>
-            <Suspense fallback={<>Loading suspense</>}>{children} </Suspense>
+            <Suspense
+              fallback={
+                <>
+                  <SuspenseMotion />
+                </>
+              }
+            >
+              {children}{" "}
+            </Suspense>
           </TranslationsProvider>
           {/* <TranslationsProvider/> */}
         </body>

@@ -72,9 +72,11 @@ const ContactForm = () => {
             placeholder={t("contact.form.phone.placeholder")}
             required={true}
           />
-          <Button className="h-12 rounded-3xl min-w-fit min-[1920px]:w-48 font-bold text-lg bg-sky-900 text-white hover:bg-red-700 transition delay-150 duration-300 ease-in-out">
-            <span>{t("header.register_button")}</span>
-          </Button>{" "}
+          <div className="w-full flex justify-center md:justify-start">
+            <Button className="h-12 rounded-3xl min-w-fit min-[1920px]:w-48 font-bold text-lg bg-sky-900 text-white hover:bg-red-700 transition delay-150 duration-300 ease-in-out">
+              <span>{t("header.register_button")}</span>
+            </Button>{" "}
+          </div>
         </div>
       </form>
     </Form>
