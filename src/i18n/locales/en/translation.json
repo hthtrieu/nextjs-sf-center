@@ -6,7 +6,10 @@
     "label": {
       "home": "Hone",
       "about_us": "About us",
-      "facilities": "Facilities"
-    }
+      "facilities": "Facilities",
+      "contact": "Contact",
+      "courses": "Courses"
+    },
+    "register_button": "Register now"
   }
 }

@@ -2,11 +2,64 @@
   "common": {
     "hello": "Xin chào"
   },
+  "home": {
+    "hero": {
+      "slogan": "Tự hào chắp cánh tương lai",
+      "slogan_en": "To be Your wings to be the future!"
+    }
+  },
   "header": {
     "label": {
       "home": "Trang chủ",
       "about_us": "Giới thiệu",
-      "facilities": "Cở sở vật chất"
+      "facilities": "Cở sở vật chất",
+      "contact": "Liên hệ",
+      "courses": "Khóa học"
+    },
+    "register_button": "Đăng kí ngay"
+  },
+  "courses": {
+    "course_1": {
+      "name": "Khóa học 1",
+      "description": "Mô tả khóa học 1"
+    },
+    "course_2": {
+      "name": "Khóa học 2",
+      "description": "Mô tả khóa học 2"
+    },
+    "course_3": {
+      "name": "Khóa học 3",
+      "description": "Mô tả khóa học 3"
+    }
+  },
+  "top_students": {
+    "title": "Học viên tiêu biểu"
+  },
+  "facilities": {
+    "title": "Cơ sở vật chất"
+  },
+  "activities": {
+    "title": "Hoạt động ở chúng tôi"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "form": {
+      "name": {
+        "label": "Họ tên",
+        "placeholder": "Nhập họ tên"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Nhập email"
+      },
+      "message": {
+        "label": "Nội dung",
+        "placeholder": "Nhập nội dung"
+      },
+      "phone": {
+        "label": "Số điện thoại",
+        "placeholder": "Nhập số điện thoại"
+      }
     }
   }
 }

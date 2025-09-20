@@ -17,12 +17,16 @@ export class Constants {
   static HEADER_URLS = [
     {
       label: "header.label.about_us",
-      href: "/about-us",
+      href: "#about-us",
     },
 
     {
+      label: "header.label.courses",
+      href: "#courses",
+    },
+    {
       label: "header.label.facilities",
-      href: "/facilities",
+      href: "#facilities",
     },
   ];
 
@@ -64,6 +68,7 @@ export class Constants {
     TIME_PICKER_SECOND: "time_has_second",
     NUMBER_NO_DECIMAL: "NUMBER_NO_DECIMAL",
     WEEK: "WEEK",
+    DATE_PICKER: "date_picker",
   };
 
   static TYPE_ELEMENT = {
@@ -96,4 +101,38 @@ export class Constants {
       LABEL: "VN",
     },
   };
+
+  static COURSES = [
+    {
+      description: "courses.course_1.description",
+      name: "courses.course_1.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_2.description",
+      name: "courses.course_2.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_3.description",
+      name: "courses.course_3.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+
+    {
+      description: "courses.course_1.description",
+      name: "courses.course_1.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_2.description",
+      name: "courses.course_2.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+    {
+      description: "courses.course_3.description",
+      name: "courses.course_3.name",
+      image: "/assets/images/courses/course_1.png",
+    },
+  ];
 }
