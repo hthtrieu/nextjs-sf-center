@@ -36,3 +36,7 @@ export const matchPattern = (link: string, pattern: string) => {
     return false;
   }
 };
+
+export function isFunction(value: any): value is Function {
+  return typeof value === "function";
+}

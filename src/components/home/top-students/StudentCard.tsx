@@ -16,7 +16,7 @@ const StudentCard = ({
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <CardContent className="flex aspect-3/4 items-center justify-center p-0 relative">
+        <CardContent className="flex max-h-[500px] md:h-fit aspect-3/4 items-center justify-center p-0 relative">
           <img
             src={student.image}
             alt={student.name}

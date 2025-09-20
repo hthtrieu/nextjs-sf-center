@@ -16,7 +16,7 @@ export const HeroCarousel = () => {
       }}
     >
       <CarouselContent className="h-screen max-h-[745px]">
-        <CarouselItem>
+        <CarouselItem className="overflow-hidden">
           <Hero
             data={{
               title: "Home",
@@ -25,7 +25,7 @@ export const HeroCarousel = () => {
             }}
           />
         </CarouselItem>
-        <CarouselItem>
+        <CarouselItem className="overflow-hidden">
           <Hero
             data={{
               title: "Home",
@@ -34,8 +34,7 @@ export const HeroCarousel = () => {
             }}
           />
         </CarouselItem>
-        <CarouselItem>
-          {" "}
+        <CarouselItem className="overflow-hidden">
           <Hero
             data={{
               title: "Home",
@@ -45,8 +44,14 @@ export const HeroCarousel = () => {
           />
         </CarouselItem>
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="flex justify-between">
+        <div className="absolute top-1/2 left-2 flex items-center justify-center">
+          <CarouselPrevious className="relative bg-transparent left-0 -translate-x-0 hover:-translate-x-0" />
+        </div>
+        <div className="absolute top-1/2 right-2 flex items-center justify-center">
+          <CarouselNext className="relative bg-transparent right-0 translate-x-0 hover:translate-x-0" />
+        </div>
+      </div>
     </Carousel>
   );
 };

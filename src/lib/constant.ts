@@ -17,16 +17,16 @@ export class Constants {
   static HEADER_URLS = [
     {
       label: "header.label.about_us",
-      href: "/about-us",
+      href: "#about-us",
     },
 
     {
       label: "header.label.courses",
-      href: "/courses",
+      href: "#courses",
     },
     {
       label: "header.label.facilities",
-      href: "/facilities",
+      href: "#facilities",
     },
   ];
 
@@ -68,6 +68,7 @@ export class Constants {
     TIME_PICKER_SECOND: "time_has_second",
     NUMBER_NO_DECIMAL: "NUMBER_NO_DECIMAL",
     WEEK: "WEEK",
+    DATE_PICKER: "date_picker",
   };
 
   static TYPE_ELEMENT = {

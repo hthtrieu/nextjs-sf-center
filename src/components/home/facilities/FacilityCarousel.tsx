@@ -28,6 +28,9 @@ export const FacilityCarousel = () => {
       // transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div className="flex flex-col gap-4 md:gap-8">
+        <h1 className="font-bold text-xl md:text-4xl text-sky-800 text-center">
+          {t("facilities.title")}
+        </h1>
         <Carousel
           opts={{
             align: "center",
@@ -46,7 +49,7 @@ export const FacilityCarousel = () => {
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
-                <div className="p-2">
+                <div className="p-0">
                   <FacilityCard
                     facility={{
                       name: "Hai Truong",
@@ -59,13 +62,14 @@ export const FacilityCarousel = () => {
             ))}
           </CarouselContent>
           <div className="flex justify-between">
-            <CarouselNext />
-            <CarouselPrevious />
+            <div className="absolute top-1/2 left-2 flex items-center justify-center">
+              <CarouselPrevious className="relative left-0 -translate-x-0 hover:-translate-x-0" />
+            </div>
+            <div className="absolute top-1/2 right-2 flex items-center justify-center">
+              <CarouselNext className="relative right-0 translate-x-0 hover:translate-x-0" />
+            </div>
           </div>
         </Carousel>
-        <h1 className="font-bold text-3xl text-sky-800 text-center">
-          {t("facilities.title")}
-        </h1>
       </div>
     </motion.div>
   );
