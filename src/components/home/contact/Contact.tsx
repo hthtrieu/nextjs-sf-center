@@ -10,8 +10,8 @@ export const Contact = () => {
       <h1 className="font-bold text-xl md:text-4xl text-sky-800 text-center mb-4 md:mb-8">
         {t("contact.title")}
       </h1>
-      <div className="flex justify-between">
-        <div className="w-full md:w-1/2">
+      <div className="flex flex-col md:flex-row justify-between gap-4 px-8">
+        <div className="w-full md:w-1/2 text-justify md:text-left">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
           reiciendis odit delectus unde beatae tempore sint veritatis
           praesentium iste perspiciatis ullam laboriosam amet, sed magni atque
